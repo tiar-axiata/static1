@@ -2,8 +2,5 @@
         "globalHeaders": {
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Methods": "GET"
-        },
-        "mimeTypes": {
-            ".json": "text/json"
-          }
+        }
     }
