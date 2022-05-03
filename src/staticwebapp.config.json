@@ -70,8 +70,8 @@
       }
     },
         "globalHeaders": {
-          "Access-Control-Allow-Origin": "*.celcom.com.my",
-          "Access-Control-Allow-Allow":"POST, GET, OPTIONS"
+          "Access-Control-Allow-Origin": "https://celcomb2c.b2clogin.com",
+          "Access-Control-Allow-Methods": "POST, GET, OPTIONS"
         },
     "mimeTypes": {
       ".json": "text/json"
