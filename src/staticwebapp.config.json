@@ -70,7 +70,8 @@
       }
     },
         "globalHeaders": {
-          "Access-Control-Allow-Origin": "*.celcom.com.my"
+          "Access-Control-Allow-Origin": "*.celcom.com.my",
+          "Access-Control-Allow-Allow":"POST, GET, OPTIONS"
         },
     "mimeTypes": {
       ".json": "text/json"
