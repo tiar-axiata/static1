@@ -29,7 +29,7 @@
         "allowedRoles": ["authenticated"]
       },
       {
-        "route": "/customers/contoso*",
+        "route": "/customers",
         "allowedRoles": ["administrator", "customers_contoso"]
       },
       {
@@ -37,16 +37,12 @@
         "rewrite": "/.auth/login/github"
       },
       {
-        "route": "/.auth/login/twitter",
+        "route": "/.auth",
         "statusCode": 404
       },
       {
         "route": "/logout",
         "redirect": "/.auth/logout"
-      },
-      {
-        "route": "/calendar*",
-        "rewrite": "/calendar.html"
       },
       {
         "route": "/specials",
