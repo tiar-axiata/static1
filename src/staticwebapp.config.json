@@ -1,9 +1,5 @@
 {
     "routes": [
-        {
-            "route": "/assets",
-            "allowedRoles": ["assets"]
-          },
       {
         "route": "/profile*",
         "allowedRoles": ["authenticated"]
