@@ -9,10 +9,6 @@
         "allowedRoles": ["administrator"]
       },
       {
-        "route": "/images/*",
-        "methods": ["GET"]
-      },
-      {
         "route": "/api/*",
         "methods": ["GET"],
         "allowedRoles": ["registeredusers"]
