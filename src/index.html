@@ -165,8 +165,7 @@
 $(document).ready(function() {
 
   $('#custommsg').text(`User ID ${$('#responseMsg').val()}`);
-alert($(".intro").text());
-if ($(".intro").val().indexOf("sign in")>=0) {
+if ($(".intro").text().indexOf("sign in")>=0) {
   $('#custommsg').text('');
 }
 
