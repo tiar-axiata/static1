@@ -163,11 +163,10 @@
 
 <script>
 $(document).ready(function() {
+  $('#custommsg').text(`User ID ${$('#responseMsg').val()}`);
 
 if ($(".intro").contents().find("sign in")) {
   $('#custommsg').text('');
-} else {
-  $('#custommsg').text(`User ID ${$('#responseMsg').val()}`);
 }
 
 })
