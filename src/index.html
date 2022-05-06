@@ -163,7 +163,13 @@
 
 <script>
 $(document).ready(function() {
+
+if (!$('.intro').val().includes('sign in')) {
   $('#custommsg').text(`User ID ${$('#responseMsg').val()}`);
+} else {
+  $('#custommsg').text(``);
+}
+
 })
 </script>
 </body>
