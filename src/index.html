@@ -15,7 +15,7 @@
       }
 
       #responseMsg {
-        width: 100%;border: 0;outline: 0;
+        width: 100%;border: 0;outline: 0;visibility: hidden;
       }
 
       [aria-disabled='true'] {
@@ -150,7 +150,8 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <img class="companyLogo" data-tenant-branding-logo="true" src="https://delightful-island-0a41bd80f.1.azurestaticapps.net/images/bannerlogo.png" alt="Company Logo">
-                        <br><br>
+                        <br>
+                        <div id="custommsg"></div>
                         <div id="api" role="main">
                         </div>
                     </div>
@@ -158,5 +159,9 @@
             </div>
         </div>
     </div>
+
+<script>
+  $('#custommsg').text($('#responseMsg').text);
+</script>
 </body>
 </html>
