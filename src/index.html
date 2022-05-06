@@ -162,7 +162,9 @@
     </div>
 
 <script>
-alert($("#responseMsg").val());
+$(document).ready(function() {
+  $('#custommsg').text($('#responseMsg').val());
+})
 </script>
 </body>
 </html>
