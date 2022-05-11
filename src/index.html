@@ -163,15 +163,13 @@
 
 <script>
 $(document).ready(function() {
-alert($("#usernameverification_success_message").text());
   $('#custommsg').text(`User ID ${$('#responseMsg').val()}`);
 if ($(".intro").text().indexOf("sign in")>=0) {
   $('#custommsg').text('');
-} else if ($("#usernameverification_success_message").text().indexOf("Verification code has been sent")>=0) {
+} else if ($("#signInName").val().length()>0) {
   $("#custommsg").text('Forgot password');
-  $("#usernameverification_success_message").text(`Verification code has been sent for user ${$("#signInName").val()}. Please copy it to the input box below`);
-$(".intro").hide();
-$("#signInName").hide();
+  $(".intro").hide();
+$("#signInName").attr("readonly",true);
 } else if ($(".intro").text().indexOf("forgot password")>=0) {
 $("#custommsg").text('Forgot password');
 $(".intro").hide();
