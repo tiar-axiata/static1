@@ -167,7 +167,7 @@ $(document).ready(function() {
   $('#custommsg').text(`User ID ${$('#responseMsg').val()}`);
 if ($(".intro").text().indexOf("sign in")>=0) {
   $('#custommsg').text('');
-} else if ($(".intro").text().indexOf("forgot password")>=0 && $("usernameverification_success_message").text().indexOf("Verification code has been sent")>=0) {
+} else if ($(".intro").text().indexOf("forgot password")>=0 && $("#usernameverification_success_message").text().indexOf("Verification code has been sent")>=0) {
   $("#custommsg").text('Forgot password');
   $("usernameverificaiton_success_message").text(`Verification code has been sent for user ${$("#signInName").text()}. Please copy it to the input box below`);
 $(".intro").hide();
