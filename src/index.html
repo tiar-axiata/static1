@@ -166,7 +166,7 @@ $(document).ready(function() {
   $('#custommsg').text(`User ID ${$('#responseMsg').val()}`);
 if ($(".intro").text().indexOf("sign in")>=0) {
   $('#custommsg').text('');
-} else if ($("#signInName").val().length>0) {
+} else if ($("#signInName").length && $("#signInName").val().length>0) {
   $("#custommsg").text('Forgot password');
   $(".intro").hide();
 $("#signInName").attr("readonly",true);
