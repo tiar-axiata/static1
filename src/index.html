@@ -167,6 +167,9 @@ $(document).ready(function() {
   $('#custommsg').text(`User ID ${$('#responseMsg').val()}`);
 if ($(".intro").text().indexOf("sign in")>=0) {
   $('#custommsg').text('');
+} else if ($(".intro").text().indexOf("forgot password")>=0) {
+$("#custommsg").text('Forgot password');
+$(".intro").hide();
 }
 
 })
