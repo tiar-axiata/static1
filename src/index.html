@@ -15,9 +15,9 @@
         visibility: hidden
       }
 
-      /* #responseMsg,#responseMsg_label,#responseDmsmsisdn,#responseDmsmsisdn_label {
+      #responseMsg,#responseMsg_label,#responseDmsmsisdn,#responseDmsmsisdn_label {
         width: 100%;border: 0;outline: 0;visibility: hidden;
-      } */
+      }
 
       [aria-disabled='true'] {
   display: none;
@@ -166,7 +166,7 @@ $(document).ready(function() {
   $("#signInName").attr("readonly",true);
   $('#responseMsg').show();
   $('#custommsg').text(`User ID ${$('#responseMsg').val()}`);
-  $('#responseMsg,#usernameverificationpin_but_change_claims').hide();
+  $('#responseMsg,#usernameverificationpin_but_change_claims,#responseDmsmsisdn').hide();
 
   if ($(".intro").text().indexOf("Self reset")>=0) {
     $('#custommsg').text('');
