@@ -165,10 +165,14 @@
 $(document).ready(function() {
   $("#signInName").attr("readonly",true);
   $('#responseMsg').show();
-  $("#responseDmsmsisdn").hide();
   $('#custommsg').text(`User ID ${$('#responseMsg').val()}`);
-  $('#responseMsg').hide();
-if ($(".intro").text().indexOf("sign in")>=0) {
+  $('#responseMsg,#usernameverificationpin_but_change_claims,#responseDmsmsisdn').hide();
+
+  if ($(".intro").text().indexOf("self reset")>=0) {
+    $('#custommsg').text('');
+    $("#signInName").attr("readonly",false);
+  }
+  else if ($(".intro").text().indexOf("sign in")>=0) {
   $("#signInName").attr("readonly",false);
   $('#custommsg').text('');
 } else if ($("#signInName").length && $("#signInName").val().length>0) {
