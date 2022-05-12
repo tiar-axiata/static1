@@ -164,7 +164,10 @@
 <script>
 $(document).ready(function() {
   $("#signInName").attr("readonly",true);
+  $('#responseMsg').show();
+  $("#responseDmsmsisdn").hide();
   $('#custommsg').text(`User ID ${$('#responseMsg').val()}`);
+  $('#responseMsg').hide();
 if ($(".intro").text().indexOf("sign in")>=0) {
   $("#signInName").attr("readonly",false);
   $('#custommsg').text('');
