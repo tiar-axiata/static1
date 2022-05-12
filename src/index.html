@@ -166,7 +166,7 @@ $(document).ready(function() {
   $("#signInName").attr("readonly",true);
   $('#responseMsg').show();
   $('#custommsg').text(`User ID ${$('#responseMsg').val()}`);
-  $('#responseMsg,#usernameverificationpin_but_change_claims,#responseDmsmsisdn').hide();
+  $('#responseMsg,#usernameverificationpin_but_change_claims').hide();
 
   if ($(".intro").text().indexOf("Self reset")>=0) {
     $('#custommsg').text('');
