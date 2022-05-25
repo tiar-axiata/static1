@@ -179,7 +179,7 @@ $(document).ready(function() {
   $("#custommsg").text('Forgot password');
   $(".intro").hide();
 } else if ($(".intro").text().indexOf("forgot password")>=0) {
-$("#custommsg").text('Forgot password');
+$("#custommsg").text(`Forgot password\nUser ID ${$('#responseMsg').val()} [${$('#responseDmsmsisdn').val()}]`);
 $(".intro").hide();
 $("#signInName").attr("readonly",false);
 }
