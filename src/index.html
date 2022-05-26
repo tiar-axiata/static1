@@ -169,7 +169,8 @@ $(document).ready(function() {
   $('#responseMsg,#usernameverificationpin_but_change_claims,#responseDmsmsisdn').hide();
 
   if ($(".intro").text().indexOf("Self reset")>=0) {
-    $('#custommsg').text('');
+    $('#custommsg').html(`Self reset password<br>User ID ${$('#responseMsg').val()} [${$('#responseDmsmsisdn').val()}]`);
+    $(".intro").hide();
     $("#signInName").attr("readonly",false);
   }
   else if ($(".intro").text().indexOf("sign in")>=0) {
