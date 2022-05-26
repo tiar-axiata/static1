@@ -184,6 +184,10 @@ $(".intro").hide();
 $("#signInName").attr("readonly",false);
 }
 
+if ($('#responseDmsmsisdn').val()=='') {
+  $('#usernameverificationpin_but_send_code').hide();
+}
+
 })
 </script>
 </body>
