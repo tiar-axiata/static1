@@ -184,8 +184,9 @@ $(".intro").hide();
 $("#signInName").attr("readonly",false);
 }
 
-if ($('#responseDmsmsisdn').val()=='') {
+if ($('#responseDmsmsisdn').val()=='' && $('#usernameverificationpin_but_send_code').length) {
   $('#usernameverificationpin_but_send_code').hide();
+  $('#custommsg').html('Error: Invalid user info')
 }
 
 })
