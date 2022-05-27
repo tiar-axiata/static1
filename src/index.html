@@ -171,8 +171,10 @@ $(document).ready(function() {
   if ($(".intro").text().indexOf("Self reset")>=0) {
     if ($('#responseMsg').val()!=undefined) {
     $('#custommsg').html(`Self reset password<br>User ID ${$('#responseMsg').val()} [${$('#responseDmsmsisdn').val()}]`);
+    } else {
+      $('#custommsg').html('');
     }
-    $('#intro').text('');
+    //$('#intro').text('');
     $("#signInName").attr("readonly",false);
   }
   else if ($(".intro").text().indexOf("sign in")>=0) {
