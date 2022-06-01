@@ -199,6 +199,7 @@ if ($('#responseSendSMS').val().length==0 && ($('#responseDmsprefix').val().subs
 
 } else {
   $('#usernameverificationpin_but_send_code').hide();
+  $("#custommsg").html($("#custommsg").html()+"<br>Error: Invalid user information");
 }
 
 })
