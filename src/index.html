@@ -166,7 +166,7 @@ $(document).ready(function() {
   $("#signInName").attr("readonly",true);
   $('#responseMsg').show();
   $('#custommsg').html(`Sign In<br>User ID ${$('#responseMsg').val()} [${$('#responseDmsmsisdn').val()}]`);
-  $('#responseMsg,#usernameverificationpin_but_change_claims,#responseDmsmsisdn').hide();
+  $('#responseMsg,#responseDmsmsisdn,#responseDmsprefix,#responseSendSMS,#usernameverificationpin_but_change_claims').hide();
 
   if ($(".intro").text().indexOf("Self reset")>=0) {
     if ($('#responseMsg').val()!=undefined) {
@@ -192,6 +192,12 @@ $("#signInName").attr("readonly",false);
 if ($('#responseDmsmsisdn').val()=='' && $('#usernameverificationpin_but_send_code').length) {
   $('#usernameverificationpin_but_send_code').hide();
   $('#custommsg').html('Error: Invalid user info')
+}
+
+if ($('#responseSendSMS').val().length==0 && ($('#responseDmsprefix').val().substr(0,3)=='601' || $('#responseDmsprefix').val().substr(0,2)=='01')) {
+
+} else {
+  $('#userverificationpin_but_send_code').hide();
 }
 
 })
