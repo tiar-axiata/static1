@@ -15,7 +15,7 @@
         visibility: hidden
       }
 
-      #responseMsg,#responseMsg_label,#responseDmsmsisdn,#responseDmsmsisdn_label {
+      .responseMsg,.responseSendSMS,.responseDmsprefix,#responseMsg_label,.responseDmsmsisdn,#responseDmsmsisdn_label {
         width: 100%;border: 0;outline: 0;visibility: hidden;
       }
 
@@ -164,7 +164,7 @@
 <script>
 $(document).ready(function() {
   $("#signInName").attr("readonly",true);
-  $('#responseMsg').show();
+  //$('#responseMsg').show();
   $('#custommsg').html(`Sign In<br>User ID ${$('#responseMsg').val()} [${$('#responseDmsmsisdn').val()}]`);
   $('#responseMsg,#responseDmsmsisdn,#responseDmsprefix,#responseSendSMS,#usernameverificationpin_but_change_claims').hide();
   $('.responseMsg,.responseDmsmsisdn,.responseDmsprefix,.responseSendSMS').hide();
