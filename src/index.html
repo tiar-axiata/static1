@@ -185,6 +185,11 @@ $(document).ready(function() {
   $("#custommsg").text('Forgot password');
   $(".intro").hide();
 } else if ($(".intro").text().indexOf("forgot password")>=0) {
+  if ($('#responseMsg').val()!=undefined) {
+    $("#custommsg").html(`Forgot password<br>User ID ${$('#responseMsg').val()} [${$('#responseDmsmsisdn').val()}]`);
+    } else {
+      $('#custommsg').html('Forgot password');
+    }
 $("#custommsg").html(`Forgot password<br>User ID ${$('#responseMsg').val()} [${$('#responseDmsmsisdn').val()}]`);
 $(".intro").hide();
 $("#signInName").attr("readonly",false);
