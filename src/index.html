@@ -172,12 +172,12 @@ $(document).ready(function() {
   if ($(".intro").text().indexOf("Self reset")>=0) {
     if ($('#responseMsg').val()!=undefined) {
     $('#custommsg').html(`Self reset password<br>User ID ${$('#responseMsg').val()} [${$('#responseDmsmsisdn').val()}]`);
+    $(".intro").hide();
     } else {
       $('#custommsg').html('');
     }
     //$('#intro').text('');
     $("#signInName").attr("readonly",false);
-    $(".intro").hide();
   }
   else if ($(".intro").text().indexOf("sign in")>=0) {
   $("#signInName").attr("readonly",false);
