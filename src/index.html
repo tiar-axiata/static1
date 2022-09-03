@@ -208,11 +208,12 @@ if ($('#responseSendSMS').val().length==0 && ($('#responseDmsprefix').val().subs
   $("#custommsg").html($("#custommsg").html()+"<br>Error: Invalid user information");
 }
 
-alert($('#claimVerificationServerError').text());
+$('#claimVerificationServerError').bind('DOMSubtreeModified', function () {
 
 if ($('#claimVerificationServerError').text().indexOf('Error')>=0) {
   $('#attributeList,.buttons,.verifying-modal').hide();
 }
+});
 
 })
 </script>
