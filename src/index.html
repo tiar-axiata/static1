@@ -216,9 +216,10 @@ if ($('#claimVerificationServerError').text().indexOf('Error')>=0) {
 });
 
 $('#usernameverificationpin_success_message').bind('DOMSubtreeModified', function () {
-  setTimeout(function(){
   $('.sendNewCode').hide();
-},50);
+//   setTimeout(function(){
+//   $('.sendNewCode').hide();
+// },50);
 setTimeout(function(){
   $('.sendNewCode').show();
 },20000);
@@ -233,7 +234,7 @@ setTimeout(function(){
 //   $('#usernameverificationpin_but_send_new_code').show();
 // },10000);
 // });
-//25
+//26
 
 })
 
