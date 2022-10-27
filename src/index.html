@@ -215,6 +215,10 @@ if ($('#claimVerificationServerError').text().indexOf('Error')>=0) {
 }
 });
 
+$('#usernameverification_success_message').bind('DOMSubtreeModified', function () {
+  $('#usernameverificationpin_but_send_new_code').hide();
+});
+
 // $('<span id="retryCodeText" onclick="onclicksendnewcode()">get new code</span>').insertBefore('#usernameverificationpin_but_send_new_code');
 // $('#usernameverificationpin_but_send_new_code').hide();
 
@@ -229,18 +233,9 @@ if ($('#claimVerificationServerError').text().indexOf('Error')>=0) {
 })
 
 function onclicksendnewcode() {
-$('#usernameverificationpin_but_send_new_code').click(function(e){
-  setTimeout(function(){
-    $('#usernameverificationpin_but_send_new_code').hide();
-    $('#retryCodeText').prop('disabled',true);
-    $('#retryCodeText').text('...');
-},20);
 setTimeout(function(){
-  $('#usernameverificationpin_but_send_new_code').hide();
-  $('#retryCodeText').prop('disabled',false);
-  $('#retryCodeText').text('get new code x');
+  $('#usernameverificationpin_but_send_new_code').show();
 },20000);
-})
 }
 
 </script>
