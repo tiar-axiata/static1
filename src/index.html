@@ -215,7 +215,7 @@ if ($('#claimVerificationServerError').text().indexOf('Error')>=0) {
 }
 });
 
-$('#usernameverificationpin_success_message').on('change', function () {
+$('#usernameverificationpin_but_send_new_code').bind('DOMAttrModified', function () {
   setTimeout(function(){
   $('.sendNewCode').hide();
 },2000);
@@ -233,7 +233,7 @@ setTimeout(function(){
 //   $('#usernameverificationpin_but_send_new_code').show();
 // },10000);
 // });
-//14
+//16
 
 })
 
