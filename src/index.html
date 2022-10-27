@@ -224,18 +224,24 @@ $('#usernameverificationpin_but_send_new_code').hide();
 //   $('#usernameverificationpin_but_send_new_code').show();
 // },10000);
 // });
-//1112
+//1113
 
 })
 
 function onclicksendnewcode() {
 $('#retryCodeText').prop('disabled',true);
-$('#usernameverificationpin_but_send_new_code').trigger('click');
+$('#retryCodeText').val('...');
+$('#usernameverificationpin_but_send_new_code').click(function(){
 $('#usernameverificationpin_but_send_new_code').hide();
+  setTimeout(function(){
+    $('#usernameverificationpin_but_send_new_code').hide();
+},20);
 setTimeout(function(){
   $('#retryCodeText').prop('disabled',false);
+  $('#retryCodeText').val('get new code');
   $('#usernameverificationpin_but_send_new_code').hide();
 },20000);
+})
 }
 
 </script>
