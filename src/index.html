@@ -195,7 +195,7 @@ $(".intro").hide();
 $("#signInName").attr("readonly",false);
 }
 
-if ($('#responseDmsmsisdn').val()=='' && $('#usernameverificationpin_but_send_code').length) {
+if ($('#usernameverificationpin_but_send_code').length && $('#responseDmsmsisdn').val()=='') {
   $('#usernameverificationpin_but_send_code').hide();
   $('#custommsg').html('Error: Invalid user info')
 }
