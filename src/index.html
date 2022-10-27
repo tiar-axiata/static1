@@ -216,8 +216,7 @@ if ($('#claimVerificationServerError').text().indexOf('Error')>=0) {
 });
 
 $('#usernameverificationpin_success_message').bind('DOMSubtreeModified', function () {
-  alert('here');
-  $('#usernameverificationpin_but_send_new_code').hide();
+  $('.sendNewCode').hide();
 });
 
 // $('<span id="retryCodeText" onclick="onclicksendnewcode()">get new code</span>').insertBefore('#usernameverificationpin_but_send_new_code');
@@ -229,13 +228,13 @@ $('#usernameverificationpin_success_message').bind('DOMSubtreeModified', functio
 //   $('#usernameverificationpin_but_send_new_code').show();
 // },10000);
 // });
-//9
+//10
 
 })
 
 function onclicksendnewcode() {
 setTimeout(function(){
-  $('#usernameverificationpin_but_send_new_code').show();
+  $('.sendNewCode').show();
 },20000);
 }
 
