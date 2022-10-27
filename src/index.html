@@ -224,16 +224,17 @@ $('#usernameverificationpin_but_send_new_code').hide();
 //   $('#usernameverificationpin_but_send_new_code').show();
 // },10000);
 // });
-//1111
+//1112
 
 })
 
 function onclicksendnewcode() {
-$('#usernameverificationpin_but_send_new_code').hide();
 $('#retryCodeText').prop('disabled',true);
 $('#usernameverificationpin_but_send_new_code').trigger('click');
+$('#usernameverificationpin_but_send_new_code').hide();
 setTimeout(function(){
   $('#retryCodeText').prop('disabled',false);
+  $('#usernameverificationpin_but_send_new_code').hide();
 },20000);
 }
 
