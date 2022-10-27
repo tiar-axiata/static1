@@ -216,14 +216,17 @@ if ($('#claimVerificationServerError').text().indexOf('Error')>=0) {
 });
 
 $('#usernameverificationpin_success_message').bind('DOMSubtreeModified', function () {
-  $('.attrEntry').hide();
+$('#resenddiv').hide();
 //   setTimeout(function(){
-//   $('.attrEntry').hide();
+//   $('.sendNewCode').hide();
 // },50);
 setTimeout(function(){
-  $('.attrEntry').show();
+  $('#resenddiv').show();
 },20000);
 });
+
+$('<div id="resenddiv">').insertBefore('#usernameverificationpin_but_send_new_code');
+$('</div>').insertAfter('#usernameverificationpin_but_send_new_code');
 
 // $('<span id="retryCodeText" onclick="onclicksendnewcode()">get new code</span>').insertBefore('#usernameverificationpin_but_send_new_code');
 // $('#usernameverificationpin_but_send_new_code').hide();
@@ -234,7 +237,7 @@ setTimeout(function(){
 //   $('#usernameverificationpin_but_send_new_code').show();
 // },10000);
 // });
-//21
+//23
 
 })
 
