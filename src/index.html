@@ -166,7 +166,7 @@ $(document).ready(function() {
   $("#signInName").attr("readonly",true);
   //$('#responseMsg').show();
   $('#custommsg').html(`Sign In<br>User ID ${$('#responseMsg').val()} [${$('#responseDmsmsisdn').val()}]`);
-  $('#responseMsg,#responseDmsmsisdn,#responseDmsprefix,#responseSendSMS,#usernameverificationpin_but_change_claims').hide();
+  $('#responseMsg,#responseDmsmsisdn,#responseDmsprefix,#responseSendSMS,#usernameverificationpin_but_change_claims,#usernameverificationpin_but_send_new_code').hide();
   $('.Readonly.responseMsg,.Readonly.responseDmsmsisdn,.Readonly.responseDmsprefix,.Readonly.responseSendSMS').hide();
 
   if ($(".intro").text().indexOf("Self reset")>=0) {
@@ -196,7 +196,7 @@ $("#signInName").attr("readonly",false);
 }
 
 if ($('#usernameverificationpin_but_send_code').length && $('#responseDmsmsisdn').val()=='') {
-  $('#usernameverificationpin_but_send_code').hide();
+  $('#usernameverificationpin_but_send_code,#usernameverificationpin_but_send_new_code').hide();
   $('#custommsg').html('Error: Invalid user info')
 }
 
@@ -204,7 +204,7 @@ if ($('#usernameverificationpin_but_send_code').length && $('#responseDmsmsisdn'
 if ($('#responseSendSMS').val().length==0 && ($('#responseDmsprefix').val().substr(0,3)=='601' || $('#responseDmsprefix').val().substr(0,2)=='01')) {
 
 } else {
-  $('#usernameverificationpin_but_send_code').hide();
+  $('#usernameverificationpin_but_send_code,#usernameverificationpin_but_send_new_code').hide();
   $("#custommsg").html($("#custommsg").html()+"<br>Error: Invalid user information");
 }
 
@@ -224,6 +224,7 @@ $('#usernameverificationpin_but_send_new_code').hide();
 //   $('#usernameverificationpin_but_send_new_code').show();
 // },10000);
 // });
+//1111
 
 })
 
