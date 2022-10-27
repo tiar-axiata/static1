@@ -215,14 +215,27 @@ if ($('#claimVerificationServerError').text().indexOf('Error')>=0) {
 }
 });
 
-$('#usernameverificationpin_but_send_new_code').on('click',function(){
-  $('#usernameverificationpin_but_send_new_code').hide();
-  setTimeout(function(){
-  $('#usernameverificationpin_but_send_new_code').show();
-},10000);
-});
+$('<span id="retryCodeText" onclick="onclicksendnewcode()">get new code</span>').insertBefore('#usernameverificationpin_but_send_new_code');
+$('#usernameverificationpin_but_send_new_code').hide();
+
+// $('#usernameverificationpin_but_send_new_code').on('click',function(){
+//   $('#usernameverificationpin_but_send_new_code').hide();
+//   setTimeout(function(){
+//   $('#usernameverificationpin_but_send_new_code').show();
+// },10000);
+// });
 
 })
+
+function onclicksendnewcode() {
+$('#usernameverificationpin_but_send_new_code').hide();
+$('#retryCodeText').prop('disabled',true);
+$('#usernameverificationpin_but_send_new_code').trigger('click');
+setTimeout(function(){
+  $('#retryCodeText').prop('disabled',false);
+},20000);
+}
+
 </script>
 </body>
 </html>
