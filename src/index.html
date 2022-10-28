@@ -216,11 +216,15 @@ if ($('#claimVerificationServerError').text().indexOf('Error')>=0) {
 });
 
 $('#usernameverificationpin_success_message').bind('DOMSubtreeModified', function () {
-  setTimeout(function(){
-  $('.sendNewCode').hide();
-},50);
+  $('#usernameverificationpin_but_send_new_code').replaceWith('<div id="newcodediv" style="dispay: none;"><button class="sendNewCode" id="usernameverificationpin_but_send_new_code" type="button" aria-label="Send new code" aria-hidden="false" style="display: inline;">Send new code</button></div>');
+
+//   setTimeout(function(){
+//   $('.sendNewCode').hide();
+// },50);
 setTimeout(function(){
-  $('.sendNewCode').show();
+  $('#usernameverificationpin_but_send_new_code').replaceWith('<button class="sendNewCode" id="usernameverificationpin_but_send_new_code" type="button" aria-label="Send new code" aria-hidden="false" style="display: inline;">Send new code</button>');
+
+  //$('.sendNewCode').show();
 },20000);
 });
 
@@ -233,7 +237,7 @@ setTimeout(function(){
 //   $('#usernameverificationpin_but_send_new_code').show();
 // },10000);
 // });
-//33
+//34
 
 //$('#usernameverificationpin_but_send_new_code').replaceWith('<div id="newcodediv" style="dispay: inline;"><button class="sendNewCode" id="usernameverificationpin_but_send_new_code" type="button" aria-label="Send new code" aria-hidden="false" style="display: inline;">Send new code</button></div>');
 
