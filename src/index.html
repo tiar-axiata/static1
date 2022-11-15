@@ -221,7 +221,9 @@ $('#usernameverificationpin_success_message').bind('DOMSubtreeModified', functio
   $('.sendNewCode').hide();
 },50);
 setTimeout(function(){
+if ($('#continue').is(':visible')!=true) {
 $('.sendNewCode').show();
+}
 },20000);
 });
 
